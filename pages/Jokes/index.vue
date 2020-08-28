@@ -15,6 +15,12 @@ export default {
     Joke,
     SearchJokes,
   },
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+      setTimeout(() => this.$nuxt.$loading.finish(), 400);
+    });
+  },
   data() {
     return {
       jokes: [],

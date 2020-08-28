@@ -33,6 +33,12 @@ export default {
       console.error(error);
     }
   },
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+      setTimeout(() => this.$nuxt.$loading.finish(), 400);
+    });
+  },
   head() {
     return {
       title: this.joke,
@@ -50,6 +56,6 @@ export default {
 
 <style scoped>
 .back {
-  color: rgb(187, 51, 119);
+  color: #bb3377;
 }
 </style>
