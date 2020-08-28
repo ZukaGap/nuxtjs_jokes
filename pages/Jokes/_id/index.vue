@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nuxt-link to="/jokes">Back To Jokes</nuxt-link>
+    <nuxt-link to="/jokes" class="back">Back To Jokes</nuxt-link>
     <h2>{{ joke }}</h2>
     <hr />
     <small>Joke ID: {{ $route.params.id }}</small>
@@ -13,14 +13,14 @@ import axios from "axios";
 export default {
   data() {
     return {
-      joke: {}
+      joke: {},
     };
   },
   async created() {
     const config = {
       headers: {
-        Accept: "application/json"
-      }
+        Accept: "application/json",
+      },
     };
 
     try {
@@ -40,12 +40,16 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "Best place for music play"
-        }
-      ]
+          content: "Best place for music play",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
-<style></style>
+<style scoped>
+.back {
+  color: rgb(187, 51, 119);
+}
+</style>

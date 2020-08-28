@@ -30,7 +30,7 @@ body {
 
 a {
   color: #666;
-  text-decoration: nnone;
+  text-decoration: none;
 }
 
 ul {

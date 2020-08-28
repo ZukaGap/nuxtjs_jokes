@@ -9,14 +9,14 @@
 <script>
 export default {
   name: "joke",
-  props: ["joke", "id"]
+  props: ["joke", "id"],
 };
 </script>
 
 <style>
 .joke {
   padding: 1rem;
-  border: 1px dotted #ccc;
+  border: 1px solid #ccc;
   margin: 1rem 0;
 }
 </style>
