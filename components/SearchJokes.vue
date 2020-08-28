@@ -1,5 +1,5 @@
 <template>
-  <form @search.prevent="onSubmit">
+  <form @submit.prevent="onSubmit">
     <input type="text" v-model="text" placeholder="Search Dad Jokes" />
     <input type="submit" value="Search Joke" />
   </form>
